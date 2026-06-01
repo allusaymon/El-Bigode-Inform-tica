@@ -26,18 +26,17 @@ A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro 
 
 <details>
 <summary>30/05</summary>
+- Criei um algoritmo que se conectava ao banco de dados através do sqlite3. Conforme orientação do professor, ele possuía uma tabela de 3 colunas (nome, quantidade e preço)!
+- Incrementei o algoritmo dando origem a um laço que criava 50 linhas na coluna "nome" através da biblioteca estrangeira Faker. Para acompanhar, usei a biblioteca Random pra preencher as outras duas colunas...
+- Por fim, utilizei um código de Treeview do professor para **testar** se: Mesmo com dimensões baixas numa Interface Gráfica do Usuário, mesmo com poucas especificações no pady e até com mínimo suporte a tabela através de headings e columns... Se era possível exibir um banco de dados massivo, capaz de visualizar por inteiro todos seus dados.
+- Resultado: Pude perceber que através do suporte a tabela da GUI, o próprio banco de dados se adaptou e criou um modelo de scroll onde mostrava todos os "produtos". Isso foi bom, já que este projeto é de tela única e seria um problema caso a tabela criasse "páginas" para separar suas 50 linhas.
 
-
-  
-– Pesquisei no weschools como se usar com mais detalhes os itens do “tkinter” para começar a produzir os botões/parte visual, já que a cor do programa e o título da loja fictícia já estava provisoriamente definido. Sempre que tive dúvidas a respeito, pedi ajuda ao geminai para que me explicasse com mais clareza para que servia as partes de costumização do tk (como a posição de botões, tamanhos... que é um pouco confuso)
-
-- Foi extremamente complicado encontrar suas posições ideais para que os botões ficassem alinhados
-https://www.w3schools.com/python/python_ref_modules.asp
+- Por fim, criei entrys para nome, quantidade e preço acima da tabela. A intenção, além de incrementar o protótipo, era auxiliar para a criação da função "adicionar_produto" e "delete", sendo que para o segundo...
+- Criei um pequeno messagebox que perguntava se o usuário final tinha certeza se queria deletar um produto específico do banco. Como a Análise de Qualidade possuí papel em prevenir que o banco de dados saia prejudicado através de uma manipulação suja nos dados... Já que não há como desenvolver um backup de produtos e deixá-los invisíveis na tabela dentro do escopo do trabalho, pelo menos essa messagebox antes de eliminar completamente o produto deveria ter. 
 </details>
 
 <details>
-<summary>31/05</summary> 
-- Seguindo com a construção da tabela/as informações dos produtos que serão mostradas nela...
+<summary>31/05</summary>
+- a
   
-- Fui juntando uma paleta de cores, que defini para ser o design principal do site com tons de azuis/branco/cinza
 </details>
