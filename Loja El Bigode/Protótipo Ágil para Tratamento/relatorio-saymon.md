@@ -60,8 +60,7 @@ READ:
 - Existe uma função específica no código apenas para listar os produtos da tabela e ela é retornada na função "atualizar_tabela" através do botão de mesmo nome. Isso é perfeito e definitivamente o usuário final irá querer visualizar o que diretamente está acontecendo no banco de dados a cada consulta.z
 
 UPDATE:
-- É interessante em como o messagebox foi utilizado aqui para avisar que é preciso selecionar uma linha, para então atualizá-la: Intuitivo e auxilia bem o usuário final. No entanto, após usar o botão "editar", os campos de entrada de texto se preencheram com as informações do produto selecionado para edição ao uso do botão "Atualizar"... Menos o campo de texto de "quantidade", no qual continuou vazio. Isso gerará uma confusão para o usuário final, então eu resolvi. (NAO PENSADO AINDA NA SOLUCAO)
-- (O botao continua funcionando mesmo caso alguem aperte sem querer em cadatrar, quando estiver editando alguma coisa. isso cria um clone do produto: fácil de rsolver, mas pouparia o trabalho se nao tivesse como isso aconbtecer. NAO PENSADO AINDA NA SOLUCAO)
+- É interessante em como o messagebox foi utilizado aqui para avisar que é preciso selecionar uma linha, para então atualizá-la: Intuitivo e auxilia bem o usuário final. No entanto, após usar o botão "editar", os campos de entrada de texto se preencheram com as informações do produto selecionado para edição ao uso do botão "Atualizar"... Menos o campo de texto de "quantidade", no qual continuou vazio. Isso gerará uma confusão para o usuário final, então eu resolvi. Na função de editar ação, havia sido esquecido justamente as linhas de comando para ler o que estava no campo de qualidade e deletá-lo após um save na edição.
 
 DELETE:
 - Perfeito. Como dito anteriormente, é preocupante que haja uma forma de deletar definitivamente uma linha de um banco de dados real, sem nenhum direito a backup ou algo do gênero... Mas devido ao escopo simples do projeto, não há o que fazer. Ainda sim, a aplicação cumpre seu papel de importância ao exibir um messagebox NO MOMENTO que a interação com o botão ocorre, questionando a certeza da ação. Isso não acontece nos outros botões, mostrando a atenção especial que este recebeu.
@@ -69,6 +68,6 @@ DELETE:
 </details>
 
 <details>
-<summary>01/06</summary>Z
-
+<summary>01/06</summary>
+- Revisado o código do log.
 </details>
