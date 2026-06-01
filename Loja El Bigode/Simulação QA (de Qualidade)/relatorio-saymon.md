@@ -37,6 +37,7 @@ A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro 
 - Criei um pequeno messagebox que perguntava se o usuário final tinha certeza se queria deletar um produto específico do banco. Como a Análise de Qualidade possuí papel em prevenir que o banco de dados saia prejudicado através de uma manipulação suja nos dados... Já que não há como desenvolver um backup de produtos e deixá-los invisíveis na tabela dentro do escopo do trabalho, pelo menos essa messagebox antes de eliminar completamente o produto deveria ter. 
 </details>
 
+# Depois de Obter o Código Completo:
 <details>
 <summary>31/05</summary>
 - a
