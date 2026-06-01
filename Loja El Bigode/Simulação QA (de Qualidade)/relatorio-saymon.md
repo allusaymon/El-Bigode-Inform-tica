@@ -28,7 +28,7 @@ A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro 
 <details>
 <summary>30/05</summary>
 - Criei um algoritmo que se conectava ao banco de dados através do sqlite3. Conforme orientação do professor, ele possuía uma tabela de 3 colunas (nome, quantidade e preço)!
-- Incrementei o algoritmo dando origem a um laço que criava 50 linhas na coluna "nome" através da biblioteca estrangeira Faker. Para acompanhar, usei a biblioteca Random pra preencher as outras duas colunas...
+ - Incrementei o algoritmo dando origem a um laço que criava 50 linhas na coluna "nome" através da biblioteca estrangeira Faker. Para acompanhar, usei a biblioteca Random pra preencher as outras duas colunas...
 - Por fim, utilizei um código de Treeview do professor para **testar** se: Mesmo com dimensões baixas numa Interface Gráfica do Usuário, mesmo com poucas especificações no pady e até com mínimo suporte a tabela através de headings e columns... Se era possível exibir um banco de dados massivo, capaz de visualizar por inteiro todos seus dados.
 - Resultado: Pude perceber que através do suporte a tabela da GUI, o próprio banco de dados se adaptou e criou um modelo de scroll onde mostrava todos os "produtos". Isso foi bom, já que este projeto é de tela única e seria um problema caso a tabela criasse "páginas" para separar suas 50 linhas.
 
