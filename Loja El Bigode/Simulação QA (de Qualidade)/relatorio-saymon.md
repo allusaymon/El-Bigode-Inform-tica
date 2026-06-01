@@ -16,8 +16,9 @@ De acordo com nossa Análise de Requisitos (presente na pasta "Dados" no início
 <details>
 <summary>27/05</summary>
 - Estudei as anotações do professor e defini uma agenda do que precisava fazer:
-  1. Criar um Banco de Dados Falso para o protótipo. 
-  2. Criar uma interface básica Treeview para testes, incluindo campos vazios simples.
+  
+  1. Criar um Banco de Dados Falso para o protótipo.
+  2.  Criar uma interface básica Treeview para testes, incluindo campos vazios simples.
   3. Criar testes de validação de conexão ao banco de dados falso. 
 
 A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro de uma interface Treeview, caso ela tivesse MUITAS LINHAS. Tal ideia se tratava de um teste básico de READ do quarteto CRUD (Create, Read, Update e Delete).
