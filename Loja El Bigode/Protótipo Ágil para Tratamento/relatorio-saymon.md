@@ -40,7 +40,16 @@ A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro 
 # Depois de Obter o Código Completo:
 <details>
 <summary>31/05</summary>
-- Executei o código completo e a primeira coisa que pensei foi: Esta interface não parece ter suporte para o scroll de linhas que havia testado anteriormente no banco de dados falso. Será que há? Vou testar depois, adicionando uma massa de produtos.z
-- g
+- De cara, é possível ver que a coluna de status possuí um único valor chamado "Registado". Me pergunto o porquê desta coluna existir, afinal, se o objetivo é validar o produto como registrado e não-registrado... Porquê
+- Executei o código completo e a primeira coisa que pensei foi: Esta interface não parece ter suporte para o scroll de linhas que havia testado anteriormente no banco de dados falso. Será que há? 
+- Inseri o laço que havia feito anteriormente no protótipo, dentro da função "inserir_produtos" e removi a trava de segurança da função ação_cadastrar para isso (ela impedia que qualquer produto fosse adicionado sem que antes os campos de entrada deixassem de ser vazios, o que é ótimo!) 
+- Os produtos foram adicionados e concluí que: A tabela exibe/renderiza apenas 10 produtos antes do scroll, algo fruto do tamanho de pixels de sua dimensões, assim como formatação do Treeview. Para o banco de dados falso, ele renderizava até 32 produtos de uma vez, no entanto, é verdade que não é necessário tanto espaço na interface: O objetivo foi concluído e foi verificado que o algoritmo possuí suporte a exibir uma grande massa de dados.
+
+**Testando o CRUD**  
+- 
   
+- (deixa pra verificar depois: que estranho... Quando fui usar o "cadastrar", consegui adicionar um produto ao banco sem nenhum problema... Mas na hora de editar o produto, automaticamente apareceu nos campos o nome do produto, o preço dele... Mas a quantidade estava em branco. Porquê? Digo, claramente eu inseri uma quantidade específica, mas o programa apagou ela do campo vazio antes que eu pudesse talvez alterá-la?)z
+- (o terminal do python agiu estranho nesses atos. Como se eu tivesse visto a prova de algo, o terminal estava exibindo prints simples de auditoria: "Banco de dados criado", "Produto X cadastrado", mas... "Erro: **Quantidade** deve ser um número inteiro e Preço deve ser decimal.". Pensei "oh, talvez eu tenha tentado cadastrar deixando os campos vazios, né? Posso tentar de novo... Mas a mesma mensagem de erro apareceu novamente, mesmo que os valores inseridos fossem validos e fossem enviados até para o banco. O que estava acontecendo?)
+
+- verifiquei que o programa possuí formatação específica para o campo "nome do produto". Quer dizer que se o usuário final quiser inserir "tEcLado lEgAL dA rAZEr", vai constar exatamente assim na tabela: Isso não pode ser assim. 
 </details>
