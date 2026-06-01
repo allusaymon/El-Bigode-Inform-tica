@@ -40,16 +40,35 @@ A intenção era **testar** como uma tabela SQL conseguiria se comportar dentro 
 # Depois de Obter o Código Completo:
 <details>
 <summary>31/05</summary>
-- De cara, é possível ver que a coluna de status possuí um único valor chamado "Registado". Me pergunto o porquê desta coluna existir, afinal, se o objetivo é validar o produto como registrado e não-registrado... Porquê
+- De cara, é possível ver que a coluna de status possuí um único valor chamado "Registado". Me pergunto o porquê desta coluna existir, afinal, se o objetivo é validar o produto como registrado e não-registrado... Porquê não existe o valor não-registrado? O certo não seria esse status mudar devido a alguma alteração no valor da quantidade ou no preço? É uma parte incompleta do código que trará confusão para o usuário final. Ainda sim, irei mudar o "Registado" para "Registrado".
+
 - Executei o código completo e a primeira coisa que pensei foi: Esta interface não parece ter suporte para o scroll de linhas que havia testado anteriormente no banco de dados falso. Será que há? 
+
 - Inseri o laço que havia feito anteriormente no protótipo, dentro da função "inserir_produtos" e removi a trava de segurança da função ação_cadastrar para isso (ela impedia que qualquer produto fosse adicionado sem que antes os campos de entrada deixassem de ser vazios, o que é ótimo!) 
-- Os produtos foram adicionados e concluí que: A tabela exibe/renderiza apenas 10 produtos antes do scroll, algo fruto do tamanho de pixels de sua dimensões, assim como formatação do Treeview. Para o banco de dados falso, ele renderizava até 32 produtos de uma vez, no entanto, é verdade que não é necessário tanto espaço na interface: O objetivo foi concluído e foi verificado que o algoritmo possuí suporte a exibir uma grande massa de dados.
+
+- Os produtos foram adicionados e concluí que: A tabela exibe/renderiza apenas 10 produtos antes do scroll, algo fruto do tamanho de pixels de sua dimensões, assim como formatação do Treeview. Para o banco de dados falso, ele renderizava até 32 produtos de uma vez, no entanto, é verdade que não é necessário tanto espaço na interface: O objetivo foi concluído e foi verificado que o algoritmo possuí suporte a exibir uma grande massa de dados. Dessa forma, excluí o laço criado após o teste.
 
 **Testando o CRUD**  
-- 
-  
-- (deixa pra verificar depois: que estranho... Quando fui usar o "cadastrar", consegui adicionar um produto ao banco sem nenhum problema... Mas na hora de editar o produto, automaticamente apareceu nos campos o nome do produto, o preço dele... Mas a quantidade estava em branco. Porquê? Digo, claramente eu inseri uma quantidade específica, mas o programa apagou ela do campo vazio antes que eu pudesse talvez alterá-la?)z
-- (o terminal do python agiu estranho nesses atos. Como se eu tivesse visto a prova de algo, o terminal estava exibindo prints simples de auditoria: "Banco de dados criado", "Produto X cadastrado", mas... "Erro: **Quantidade** deve ser um número inteiro e Preço deve ser decimal.". Pensei "oh, talvez eu tenha tentado cadastrar deixando os campos vazios, né? Posso tentar de novo... Mas a mesma mensagem de erro apareceu novamente, mesmo que os valores inseridos fossem validos e fossem enviados até para o banco. O que estava acontecendo?)
+CREATE: 
+- Está ótimo! A aplicação está mantendo uma conexão congruente com o banco de dados, criando ele instantaneamente com suas devidas colunas. Cada coluna possuí tipos específicos de dados para elas e restrições que deixam o código bem completo... Chegando até a apagar espaços vazios nas extremidades do campo de texto. No entanto...
+- Algo me incomodou na inserção do nome de novos produtos no banco: Não há formatação padrão para o campo de entrada de texto "nome". Isso significa que se o usuário final quiser inserir "tEcLado lEgAL dA rAZEr", vai constar exatamente assim na tabela: Isso não pode ser assim. 
+- Mudei isso: Em todas as funções, na parte da trava de segurança no tratamento de tipo dos dados, adicionei a ferramenta capitalize() para deixar todo o texto minúsculo, mas com a primeira letra maíscula.Z
+- Outra coisa grave é o fato de poder inserir números negativos nas colunas de "Quantidade" e no "Preço": Não existe preço negativo, muito menos estoque negativo.z
+- Da mesma forma: Em todas as funções, na parte da trava de segurança no tratamento de tipo dos dados, adicionei logo abaixo uma estrutura de decisão que trava até a conexão com o banco caso o preço ou a quantidade sejam negativos.
 
-- verifiquei que o programa possuí formatação específica para o campo "nome do produto". Quer dizer que se o usuário final quiser inserir "tEcLado lEgAL dA rAZEr", vai constar exatamente assim na tabela: Isso não pode ser assim. 
+READ:
+- Existe uma função específica no código apenas para listar os produtos da tabela e ela é retornada na função "atualizar_tabela" através do botão de mesmo nome. Isso é perfeito e definitivamente o usuário final irá querer visualizar o que diretamente está acontecendo no banco de dados a cada consulta.z
+
+UPDATE:
+- É interessante em como o messagebox foi utilizado aqui para avisar que é preciso selecionar uma linha, para então atualizá-la: Intuitivo e auxilia bem o usuário final. No entanto, após usar o botão "editar", os campos de entrada de texto se preencheram com as informações do produto selecionado para edição ao uso do botão "Atualizar"... Menos o campo de texto de "quantidade", no qual continuou vazio. Isso gerará uma confusão para o usuário final, então eu resolvi. (NAO PENSADO AINDA NA SOLUCAO)
+- (O botao continua funcionando mesmo caso alguem aperte sem querer em cadatrar, quando estiver editando alguma coisa. isso cria um clone do produto: fácil de rsolver, mas pouparia o trabalho se nao tivesse como isso aconbtecer. NAO PENSADO AINDA NA SOLUCAO)
+
+DELETE:
+- Perfeito. Como dito anteriormente, é preocupante que haja uma forma de deletar definitivamente uma linha de um banco de dados real, sem nenhum direito a backup ou algo do gênero... Mas devido ao escopo simples do projeto, não há o que fazer. Ainda sim, a aplicação cumpre seu papel de importância ao exibir um messagebox NO MOMENTO que a interação com o botão ocorre, questionando a certeza da ação. Isso não acontece nos outros botões, mostrando a atenção especial que este recebeu.
+
+</details>
+
+<details>
+<summary>01/06</summary>Z
+
 </details>
