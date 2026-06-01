@@ -26,8 +26,8 @@ Ainda sim, optamos por criar este repositório pra facilitar a consulta dos cód
 
 # Notas de Atualização:
 - Front-end v1 feito - 31/05/26
-- Simulação de Qualidade v1 feita - 31/05/26
-- Back-end em andamento
+- Simulação de Qualidade v2 feita - 01/06/26
+- Back-end feito - 31/05/2026
 - Log em andamento
 - Relatório RAD em andamento
 
