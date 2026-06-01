@@ -62,6 +62,9 @@ atualizar_botao.grid(row=0, column=1, padx=15)
 excluir_botao = ttk.Button(botoes, text="🗑 EXCLUIR")
 excluir_botao.grid(row=0, column=2, padx=15)
 
+editar_botao = ttk.Button(botoes, text="✏️ EDITAR")
+editar_botao.grid(row=0, column=3, padx=15)
+
 # TABELA DOS PRODUTOS/INFORMAÇÕES E BOTÕES
 frame_tabela = tk.Frame(root, bg="#B4B4B4", bd=1)
 frame_tabela.pack(fill="both", expand=True, padx=5)
