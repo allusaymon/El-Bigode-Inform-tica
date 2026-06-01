@@ -26,7 +26,6 @@ def criar_tabela():
 
 def inserir_produtos(Nome,Quantidade,Preco):
     try:
-        #trava de segurança e limpeza
         Nome =str(Nome).strip().capitalize()
         Quantidade = int(Quantidade)
         Preco = float(Preco)
@@ -78,7 +77,6 @@ def listar_produtos():
     
 def atualizar_produto(id_produto, novo_Nome, nova_Quantidade, novo_Preco):
     try:
-        #trava de segurança e limpeza
         novo_Nome = str(novo_Nome).strip().capitalize()
         nova_Quantidade = int(nova_Quantidade)
         novo_Preco = float(novo_Preco)
@@ -129,10 +127,6 @@ def deletar_produto(id_produto):
         if 'conexao' in locals() and conexao:
             conexao.close()
 
-
-# ==========================================
-# AS NOSSAS FUNÇÕES DE PONTE
-# ==========================================
 def acao_cadastrar():
     nome_digitado = entry_nome.get()
     qtd_digitada = entry_qtd.get()
@@ -188,7 +182,10 @@ def acao_editar():
 
     entry_nome.delete(0, tk.END)
     entry_nome.insert(0, valores[1])
-
+    
+    entry_qtd.delete(0, tk.END)
+    entry_qtd.insert(0, valores[2])
+    
     entry_preco.delete(0, tk.END)
     entry_preco.insert(0, valores[3])
 
@@ -222,42 +219,39 @@ def acao_atualizar():
 
 
 
-# ==========================================
-# frontend
-# ==========================================
 criar_tabela()
 
-# Configurações da janela 
+
 root = tk.Tk()
 root.title("El Bigode - Estoque")
 root.geometry("1920x1080")
 root.resizable(True, True)
-# CORES PRINCIPAIS
+
 cor_de_fundo = "#181C2B"
 root.configure(bg=cor_de_fundo)
 cor_preto = "#0B0F1D"
 cor_branco = "#FFFFFF"
 cor_borda = "#1E90FF"
 
-# Configuração do Estilo
+
 style = ttk.Style()
 style.theme_use('clam')
 style.configure("TLabel", background=cor_preto, foreground=cor_branco)
-#Configuração dos botões e efeitos
+
 style.configure("TButton", font=("Arial", 12, "bold"), padding=8, background="#16139D", foreground="#FFFFFF")
 style.map("TButton", foreground=[('pressed', "#000000"), ('active', "#1500FF")])
 
-### cor do quadradão no titulo
+
 frame_topo = tk.Frame(root, bg=cor_preto, bd=0, highlightthickness=1, highlightbackground="#1E90FF", highlightcolor=cor_borda)
 frame_topo.pack(fill="x", padx=20, pady=20, ipady=10)
 
-#titulo principal
+
 titulo = ttk.Label(frame_topo, text="EL BIGODE", font=("Bahnschrift Condensed", 70, "bold"))
 titulo.pack(pady=(10, 0))
 subtitulo = ttk.Label(frame_topo, text="I N F O R M Á T I C A", font=("Segoe UI", 20, "bold"))
 subtitulo.pack(pady=(0, 10))
 
-# CADASTRO DO PRODUTO (FORMULARIO)
+
 frame_form = tk.Frame(root, bg="#0B0F1D", bd=0, highlightthickness=1, highlightbackground="#1E90FF", highlightcolor=cor_borda)
 frame_form.pack(fill="x", padx=20, pady=20, ipady=15)
 fonte_titulo = ("Arial", 14, "bold")
@@ -275,7 +269,7 @@ ttk.Label(frame_form, text="PREÇO (R$):", font=fonte_titulo).grid(row=1, column
 entry_preco = ttk.Entry(frame_form, width=15, font=fonte_caixas)
 entry_preco.grid(row=1, column=3, padx=10, sticky="w", pady=10)
 
-## CADASTRO DO PRODUTO (BOTÕES)
+
 botoes = tk.Frame(root, bg=cor_de_fundo)
 botoes.pack(pady=(10, 20))
 
@@ -291,7 +285,7 @@ excluir_botao.grid(row=0, column=2, padx=15)
 editar_botao = ttk.Button(botoes, text="✏️ EDITAR", command=acao_editar)
 editar_botao.grid(row=0, column=3, padx=15)
 
-# TABELA DOS PRODUTOS/INFORMAÇÕES E BOTÕES
+
 frame_tabela = tk.Frame(root, bg="#B4B4B4", bd=1)
 frame_tabela.pack(fill="both", expand=True, padx=5)
 
