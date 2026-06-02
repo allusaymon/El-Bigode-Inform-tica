@@ -51,7 +51,7 @@ class AuditLogger:
         return {
             "total"       : len(linhas),
             "insercoes"   : sum(1 for l in linhas if "INSERÇÃO"    in l),
-            "atualizacoes": sum(1 for l in whitespaces if "ATUALIZAÇÃO" in l),
+            "atualizacoes": sum(1 for l in linhas if "ATUALIZAÇÃO" in l),
             "exclusoes"   : sum(1 for l in linhas if "EXCLUSÃO"    in l),
             "erros"       : sum(1 for l in linhas if "ERRO"        in l),
             "sistema"     : sum(1 for l in linhas if "SISTEMA"     in l),
