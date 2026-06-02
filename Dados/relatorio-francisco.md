@@ -1,7 +1,8 @@
 # Relatório Individual para auxílio do Relatório RADz
 <details>
 <summary>Criei um arquivo isolado (backend.py) onde vou concentrar toda a lógica do banco de dados e as funções (o CRUD).</summary>
-- Comecei às 12 horas. Fazendo assim, eu já consigo ir programando e testando o banco sozinho, sem precisar esperar a interface visual ficar pronta. Isso vai dar uma agilizada monstra na nossa entrega, focando total na metodologia RAD.
+
+  - Comecei às 12 horas. Fazendo assim, eu já consigo ir programando e testando o banco sozinho, sem precisar esperar a interface visual ficar pronta. Isso vai dar uma agilizada monstra na nossa entrega, focando total na metodologia RAD.
 
 - Comecei a montar o banco usando o sqlite3 direto no Python. Criei uma função para conectar e gerar o arquivo .db e já mandei um comando SQL (CREATE TABLE) para montar a nossa tabela produtos. Para os campos, segui certinho o que foi pedido: o ID como chave primária (INTEGER), o nome do produto (TEXT), a quantidade (INTEGER) e o preço (REAL para aceitar os centavos). Deixei o ID para se preencher sozinho (autoincremento) para facilitar a nossa vida na hora de inserir os dados. Rodei o script aqui e o arquivo do banco já foi gerado.
 </details>
