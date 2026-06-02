@@ -69,5 +69,5 @@ DELETE:
 
 <details>
 <summary>01/06</summary>
-- Revisado o código do log.
+- Revisado//aplicado o código do log no código main do trabalho.
 </details>
