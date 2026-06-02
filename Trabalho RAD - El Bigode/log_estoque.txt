@@ -1,0 +1,18 @@
+[02/06/2026 18:26:30] SISTEMA - Sistema El Bigode Informática iniciado.
+[02/06/2026 18:27:49] INSERÇÃO - Produto "teclado mecânico 60% redragon" (Qtd: 17, Preço: R$ 250.00) cadastrado com sucesso.
+[02/06/2026 18:28:42] INSERÇÃO - Produto "mouse attack shark x11" (Qtd: 60, Preço: R$ 128.00) cadastrado com sucesso.
+[02/06/2026 18:31:11] INSERÇÃO - Produto "placa-mãe Revenger g-a320" (Qtd: 5, Preço: R$ 378.00) cadastrado com sucesso.
+[02/06/2026 18:39:13] INSERÇÃO - Produto "Monitor lg 19 polegadas" (Qtd: 20, Preço: R$ 258.00) cadastrado com sucesso.
+[02/06/2026 18:40:20] INSERÇÃO - Produto "Controle PG-9076 Bluetooth" (Qtd: 80, Preço: R$ 95.00) cadastrado com sucesso.
+[02/06/2026 18:41:38] INSERÇÃO - Produto "Tablet Lenovo 64gb" (Qtd: 14, Preço: R$ 1244.00) cadastrado com sucesso.
+[02/06/2026 18:42:43] INSERÇÃO - Produto "Processador AMD Ryzen 7 5700X" (Qtd: 10, Preço: R$ 1100.00) cadastrado com sucesso.
+[02/06/2026 18:43:38] ATUALIZAÇÃO - Produto "Processador amd ryzen 7 5700x" alterado (Nova Qtd: 2, Novo Preço: R$ 959.99).
+[02/06/2026 18:45:35] INSERÇÃO - Produto "sandisk pendrive usb 3.0 256gb" (Qtd: 80, Preço: R$ 125.00) cadastrado com sucesso.
+[02/06/2026 18:47:54] INSERÇÃO - Produto "mousepad gamer 60x75cm" (Qtd: 50, Preço: R$ 42.90) cadastrado com sucesso.
+[02/06/2026 18:49:23] INSERÇÃO - Produto "capa para notebook sundex" (Qtd: 16, Preço: R$ 25.00) cadastrado com sucesso.
+[02/06/2026 18:51:42] INSERÇÃO - Produto "macbook air m2 8gb" (Qtd: 3, Preço: R$ 7549.99) cadastrado com sucesso.
+[02/06/2026 18:52:15] ATUALIZAÇÃO - Produto "Placa-mãe revenger g-a320" alterado (Nova Qtd: 1, Novo Preço: R$ 340.00).
+[02/06/2026 18:52:35] EXCLUSÃO - Produto "Capa para notebook sundex" removido do sistema.
+[02/06/2026 18:52:55] ATUALIZAÇÃO - Produto "Processador amd ryzen 7 5700x" alterado (Nova Qtd: 0, Novo Preço: R$ 959.99).
+[02/06/2026 18:53:00] EXCLUSÃO - Produto "Processador amd ryzen 7 5700x" removido do sistema.
+[02/06/2026 18:54:08] INSERÇÃO - Produto "Nintendo Switch 13 versão mário el bigode" (Qtd: 1, Preço: R$ 100.00) cadastrado com sucesso.
