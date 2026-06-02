@@ -16,6 +16,7 @@ Assim que a equipe disponibilizou o main.py principal unificado, iniciei e concl
 
 <details>
 <summary>01/06</summary>
+  
 - **Desenvolvimento do Módulo Isolado (`log_auditoria.py`):** Programei do zero a classe independente `AuditLogger`. Utilizando de um fork pessoal, optei por manter esse módulo em um arquivo separado seguindo o princípio de responsabilidade única, evitando poluir o script principal de interface da equipe.
 
 - **Implementação de Regras do Log:** - Desenvolvi os métodos de gravação de arquivos: `log_insert`, `log_update` e `log_delete`.
