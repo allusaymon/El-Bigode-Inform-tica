@@ -20,16 +20,17 @@ Ainda sim, optamos por criar este repositório pra facilitar a consulta dos cód
 ### Log de Auditoria
 - **Matheus Vinicius**
 
-### Análise de Qualidade - Tratamento de Erros
+### Análise de Qualidade - Prototipagem e Testes
 - **Saymon Madson**
 </details>
 
-# Notas de Atualização:
+# Notas de Atualização / Checklist
 - Front-end v1 feito - 31/05/26
-- Simulação de Qualidade v2 feita - 01/06/26
 - Back-end feito - 31/05/2026
-- Log em andamento
-- Relatório RAD em andamento
+- Simulação de Qualidade v2 feita - 01/06/26
+- Log feito - 01/06/2026
+- Relatório RAD em andamento - 
+(todos os relatorios individuais estão na pasta "Dados")
 
 
 # 1. Requisitos de Interface (Tela Única)
