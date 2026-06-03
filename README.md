@@ -29,7 +29,7 @@ Ainda sim, optamos por criar este repositório pra facilitar a consulta dos cód
 - Back-end feito - 31/05/2026
 - Simulação de Qualidade v2 feita - 01/06/26
 - Log feito - 01/06/2026
-- Relatório RAD em andamento - 
+- Relatório RAD - 02/06/26
 (todos os relatorios individuais estão na pasta "Dados")
 
 
